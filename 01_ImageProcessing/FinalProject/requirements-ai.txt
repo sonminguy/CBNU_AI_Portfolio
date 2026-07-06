@@ -1,0 +1,13 @@
+# Optional dependencies for single-image novel-view synthesis.
+# Install only when you want to generate synthetic test views.
+# This environment uses recent transformers/huggingface-hub builds. The script
+# applies a small compatibility patch for Zero123++ custom attention processors.
+diffusers==0.38.0
+huggingface-hub>=1.5.0
+transformers
+accelerate
+safetensors
+Pillow
+sentencepiece
+# Optional but recommended for the large Qwen Image Edit model.
+bitsandbytes
