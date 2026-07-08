@@ -1,0 +1,17 @@
+python3 src/generate_views_svc.py \
+  --backend native \
+  --image data/source/Shose.png \
+  --out data/raw/Shose_svc \
+  --target-count 40 \
+  --traj-prior orbit \
+  --short-side 576
+
+
+
+python3 src/reconstruct_object.py \
+  --images data/raw/Shose_svc \
+  --out outputs/Shose_svc \
+  --pair-strategy window \
+  --pair-window 3 \
+  --match-mode hybrid \
+  --pose-mode orbit
